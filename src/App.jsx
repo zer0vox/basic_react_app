@@ -6,11 +6,13 @@ import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import { StateHook } from "./StateHook";
 import StateHookArray from "./StateHookArray";
+import Timer from "./setEffect";
+import Reactdummy from "./effectHook";
 
 const App = () => {
   return (
     <>
-      <StateHookArray />
+      <Reactdummy />
     </>
   );
 };
