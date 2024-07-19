@@ -3,6 +3,7 @@ import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Row, Col } from "react-bootstrap";
 
 const Survey = () => {
   const [age, setAge] = useState(18);
@@ -92,46 +93,44 @@ const Survey = () => {
 
         <div className="form-group">
           <label htmlFor="drink">What drink would you like?</label>
-          <div>
-            <input
-              type="checkbox"
-              id="coffee"
-              name="drink"
-              value="coffee"
-              onChange={handleDrinkChange}
-            />
-            <label htmlFor="coffee" className="form-check-label">
-              Coffee
-            </label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="tea"
-              name="drink"
-              value="tea"
-              onChange={handleDrinkChange}
-            />
-            <label htmlFor="tea" className="form-check-label">
-              Tea
-            </label>
-          </div>
-          <div>
-            <input
-              type="checkbox"
-              id="juice"
-              name="drink"
-              value="juice"
-              onChange={handleDrinkChange}
-            />
-            <label htmlFor="juice" className="form-check-label">
-              Juice
-            </label>
-          </div>
-
-          <div className="form-text">
-            Your drink selection: {drink.join(", ")}
-          </div>
+          <Row>
+            <Col xs={4}>
+              <input
+                type="checkbox"
+                id="coffee"
+                name="drink"
+                value="coffee"
+                onChange={handleDrinkChange}
+              />
+              <label htmlFor="coffee" className="form-check-label">
+                Coffee
+              </label>
+            </Col>
+            <Col xs={4}>
+              <input
+                type="checkbox"
+                id="tea"
+                name="drink"
+                value="tea"
+                onChange={handleDrinkChange}
+              />
+              <label htmlFor="tea" className="form-check-label">
+                Tea
+              </label>
+            </Col>
+            <Col xs={4}>
+              <input
+                type="checkbox"
+                id="juice"
+                name="drink"
+                value="juice"
+                onChange={handleDrinkChange}
+              />
+              <label htmlFor="juice" className="form-check-label">
+                Juice
+              </label>
+            </Col>
+          </Row>
         </div>
 
         <button type="submit" className="btn btn-primary">
